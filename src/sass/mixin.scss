@@ -1,0 +1,5 @@
+@mixin flexCSS ($justfyContent:center, $alingItems:center) {
+  display: flex;
+  justify-content: $justfyContent;
+  align-items: $alingItems;
+}

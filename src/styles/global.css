@@ -1,0 +1,44 @@
+:root{
+  --red-100: #A31616;
+  --red-200: #9E3939;
+  --red-300: #591212;
+  --white-100: #ffffff;
+  --white-200: #E3E3E3;
+  --gray-100: #8C8C8C;
+  --gray-200: #404040;
+  --dark-100: #181818;
+  --dark-200: #0D0D0D;
+  
+  --xl: 4rem;
+  --l: 3rem;
+  --m: 2.5rem;
+  --r: 2rem;
+  --sm: 1.8rem;
+  --xsm: 1.6rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  width: 100%;
+  padding: 1rem 10%;
+  background-color: var(--dark-200);  
+}
+
+section{
+  width: 100%;
+  height: auto;
+  padding: 12rem 10%;  
+}
