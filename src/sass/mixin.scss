@@ -3,3 +3,17 @@
   justify-content: $justfyContent;
   align-items: $alingItems;
 }
+
+@mixin burgerMenu () {
+  content: '';
+  position: relative;
+
+  display: block;
+  width: 2rem;
+  height: 0.2rem;
+
+  background: var(--white-100);
+  margin-top: 0.5rem;
+  transition: .3s;
+}
+

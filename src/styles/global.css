@@ -1,5 +1,5 @@
 :root{
-  --red-100: #A31616;
+  --red-100: #a31616;
   --red-200: #9E3939;
   --red-300: #591212;
   --white-100: #ffffff;
@@ -8,6 +8,7 @@
   --gray-200: #404040;
   --dark-100: #181818;
   --dark-200: #0D0D0D;
+  --gradient: linear-gradient(to right, var(--red-100), var(--dark-100));
   
   --xl: 4rem;
   --l: 3rem;
@@ -31,14 +32,10 @@ html{
   font-family: 'Roboto', sans-serif;
 }
 
-header{
-  width: 100%;
-  padding: 1rem 10%;
-  background-color: var(--dark-200);  
-}
-
 section{
   width: 100%;
   height: auto;
   padding: 12rem 10%;  
 }
+
+  

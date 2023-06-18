@@ -1,39 +1,99 @@
 @import '../../sass/mixin.scss';
 
-.navbar{
-  @include flexCSS(space-between);
+.header{
+  width: 100%;
+  padding: 1rem 10%;
+  background-color: var(--dark-200);  
+  position: relative;
+  
+  .navbar{
+    @include flexCSS(space-between);
+    
+    .navlist{
+      @include flexCSS();
+      gap: 3rem;
 
-  .navlist{
-    @include flexCSS();
-    gap: 2rem;
-
-    a{
-      font-size: var(--sm);
-      font-weight: 500;    
-      
-      color: var(--white-100);
-
-      position: relative;
-
-      &::after{
-        content: '';
-        position: absolute;
-        display: block;
-        height: 2px;
-        width: 0;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(to right, #f10000, rgba(133, 5, 5, 0.274));
-        transition: all .30s ease;
+      a{
+        font-size: var(--sm);
+        font-weight: 400; 
+        color: var(--white-100);
+        position: relative;
+  
+        &::after{
+          content: '';
+          position: absolute;
+          display: block;
+          height: 0.2rem;
+          width: 0;
+          bottom: 3;
+          left: 0;
+          background: linear-gradient(to right, var(--red-100), var(--dark-100));
+          transition: all .20s ease;
+        }
+        &:hover::after{
+          width: 100%;
+        }
       }
-      
-      &:hover::after{
-        width: 100%;
-      }
-    }
-
-    .navlink{    
-      color: var(--red-100);
     }
   }
 }
+
+.menu{
+  display: none;
+  
+  .mobileMenu{
+    border-top: 0.2rem solid var(--white-100);
+    width: 2rem;
+  
+    &::before, &::after{
+      @include burgerMenu()
+    }
+  }
+  
+  .mobileMenuActive{
+    border-top-color: transparent;
+    
+    &::before, &::after{
+      @include burgerMenu()
+    } 
+    
+    &::before{
+      transform: rotate(135deg);
+    }
+    &::after{
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+}
+
+@media (max-width: 64rem) {
+  .header{
+    padding: 1rem 2%;
+  }
+}
+
+@media (max-width: 48rem) { 
+  .menu{
+    display: block;
+  }
+
+  .navlist{
+    flex-direction: column;
+  }
+
+  .mobileMenuOpen{
+    position: absolute;
+    width: 100%;
+    padding: 4rem;
+    top: 5rem;
+    right: 0;
+    z-index: 1000;
+    background: var(--dark-200);
+  }
+  
+  .mobileMenuClose{
+    display: none;
+  }
+}
+  
