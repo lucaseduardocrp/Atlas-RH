@@ -2,14 +2,17 @@
   --red-100: #a31616;
   --red-200: #9E3939;
   --red-300: #591212;
+  --red-400: #2c0606;
   --white-100: #ffffff;
   --white-200: #E3E3E3;
   --gray-100: #8C8C8C;
   --gray-200: #404040;
+  --blue-100: #6B7280;
   --dark-100: #181818;
   --dark-200: #0D0D0D;
-  --gradient: linear-gradient(to right, var(--red-100), var(--dark-100));
+  --gradient: linear-gradient(to right, var(--red-100), var(--red-400));
   
+  --2xl: 4.5rem;
   --xl: 4rem;
   --l: 3rem;
   --m: 2.5rem;
@@ -29,7 +32,7 @@
 html{
   font-size: 62.5%;
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 section{
@@ -37,5 +40,22 @@ section{
   height: auto;
   padding: 12rem 10%;  
 }
+
+span{
+  color: var(--red-100);
+}
+
+@media (max-width: 90rem) {
+  :root{
+    --2xl: 3rem;
+    --xl: 3rem;
+    --l: 2.8rem;
+  }
+  
+  section{
+    padding: 2rem 2%;
+  }
+}
+
 
   

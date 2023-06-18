@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useState } from "react";
 
-import Image from "next/image";
 import Link from "next/link";
 
 import Navlink from "../Navlink";
@@ -20,7 +20,7 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <Link href={'/'}>
-          <Image src='/Logo.png' width={161} height={45} alt="Logo Atlas Consultoria de RH" />
+          <img className={styles.logo} src='/Logo.png' alt="Logo Atlas Consultoria de RH" />
         </Link>
 
         <div className={styles.menu}>

@@ -3,11 +3,17 @@
 .header{
   width: 100%;
   padding: 1rem 10%;
+  border-bottom: 0.2rem solid var(--red-100);
   background-color: var(--dark-200);  
   position: relative;
   
   .navbar{
     @include flexCSS(space-between);
+
+    .logo{
+      width: 14rem;
+      object-fit: cover;
+    }
     
     .navlist{
       @include flexCSS();
@@ -27,7 +33,7 @@
           width: 0;
           bottom: 3;
           left: 0;
-          background: linear-gradient(to right, var(--red-100), var(--dark-100));
+          background: linear-gradient(to right, var(--red-100), var(--red-400));
           transition: all .20s ease;
         }
         &:hover::after{
@@ -67,7 +73,7 @@
   }
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 90rem) {
   .header{
     padding: 1rem 2%;
   }

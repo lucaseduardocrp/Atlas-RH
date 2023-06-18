@@ -1,0 +1,57 @@
+@import '../../sass/mixin.scss';
+
+.container{
+  @include flexCSS(space-between);
+
+  .leftContent{
+    @include flexCSS('', start);
+    flex-direction: column;
+    gap: 4rem;
+
+    .buttonContent{
+      @include flexCSS();
+      gap: 2rem;
+    }
+
+    .text{
+      h1{
+        font-size: var(--2xl);
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+  
+      p{
+        font-size: var(--r);
+        font-weight: 500;
+        color: var(--blue-100);
+        margin-right: 16rem;
+      }
+    }
+  }
+
+  .atlasImage{
+    @include flexCSS();
+    background: var(--dark-200);
+    padding: 12rem 8rem;
+    border: 0.2rem solid var(--red-100);
+    border-radius: 50%;
+    margin-bottom: 8rem;
+
+    img{
+      width: 18rem;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 64rem) { 
+  .container{
+    .atlasImage{
+      display: none;
+    }
+
+    .leftContent .text p{
+      margin-right: 0;
+    }
+  }
+}
