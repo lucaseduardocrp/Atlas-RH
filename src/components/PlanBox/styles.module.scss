@@ -1,0 +1,19 @@
+@import '../../sass/mixin.scss';
+
+.container{
+  @include flexCSS();
+  gap: 4rem;
+
+  .text{
+    h3{
+      font-size: var(--sm);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p{
+      font-size: var(--xsm);
+      font-weight: 500;
+    }
+  }
+}

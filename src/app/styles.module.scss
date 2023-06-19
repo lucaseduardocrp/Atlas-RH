@@ -1,0 +1,21 @@
+@import '../sass/mixin.scss';
+
+.planSection{
+  @include flexCSS();
+
+  .container{
+    .title{
+      margin-bottom: 6rem;
+
+      >h2{
+        font-size: var(--xl);
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      
+      >p{
+        font-size: var(--sm);
+      }
+    }
+  }
+}
