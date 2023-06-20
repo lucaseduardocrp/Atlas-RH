@@ -1,0 +1,52 @@
+@import '../../sass/mixin.scss';
+
+.about{
+  h2{
+    @include title();
+    font-weight: 700;
+    margin-top: 6rem;
+  }
+
+  .title{
+    h1{
+      font-size: var(--2xl);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
+
+  .topics{
+    @include flexCSS();
+    flex-direction: column;
+  }
+  
+  .values{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem; 
+    margin-top: 6rem;
+
+    h3{
+      font-size: var(--l);
+      color: var(--gray-200);
+    }
+  }
+
+  .list{
+    ul{
+      padding: 0 2rem;
+
+      li{
+        font-size: var(--xsm);
+        line-height: 2.4;
+        list-style: disc;
+      }
+    } 
+  }
+}
+
+@media (max-width: 48rem){
+  .about .values{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
