@@ -4,6 +4,9 @@ import FirstText from '@/components/FirstText';
 import PlanBox from '@/components/PlanBox';
 
 import styles from './styles.module.scss';
+import FreeAvaliation from '@/components/FreeAvaliation';
+import CompanyStatistics from '@/components/CompanyStatistics';
+import Guarantee from '@/components/Guarantee';
 
 export default function Mastermind() {
   return(
@@ -34,6 +37,12 @@ export default function Mastermind() {
           </div>
         </div>
       </section>
+
+      <Guarantee />
+
+      <CompanyStatistics />
+
+      <FreeAvaliation />
     </>
   )
 }

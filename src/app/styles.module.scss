@@ -56,16 +56,6 @@
   }
 }
 
-.guaranteeSection{
-  text-align: center;
-
-  .guaranteeGrid{
-    @include flexCSS(space-around);
-    flex-wrap: wrap;
-    margin-top: 10rem;
-  }
-}
-
 @media (max-width: 48rem){
   .grid{
     flex-wrap: wrap;

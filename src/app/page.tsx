@@ -7,7 +7,6 @@ import FreeAvaliation from '@/components/FreeAvaliation';
 import Guarantee from '@/components/Guarantee';
 
 import styles from './styles.module.scss';
-import { GuaranteeInfos } from '@/modules/ArrayInfos';
 
 export default function Home() {
   return (
@@ -46,25 +45,7 @@ export default function Home() {
       </section>
 
       <CompanyStatistics />
-
-      <section className={styles.guaranteeSection}>
-        <div className={styles.title}>
-          <h2>Garantia total de satisfação</h2>
-          <p>Sem fidelidade, cancele quando quiser e sempre com a melhor equipe</p>
-        </div>
-        <div className={styles.guaranteeGrid}>
-          {GuaranteeInfos.map((index, id) =>
-            <Guarantee
-              src={index.imageUrl}
-              alt={index.title}
-              title={index.title}
-              text={index.text}
-              key={id}
-            />
-          )}
-        </div>
-      </section>
-
+      <Guarantee />
       <FreeAvaliation />      
     </>
   );

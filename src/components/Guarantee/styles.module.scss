@@ -1,5 +1,19 @@
 @import '../../sass/mixin.scss';
 
+.guaranteeSection{
+  text-align: center;
+
+  h2{
+    @include title();
+  }
+
+  .guaranteeGrid{
+    @include flexCSS(space-around);
+    flex-wrap: wrap;
+    margin-top: 10rem;
+  }
+}
+
 .container{
   @include flexCSS(start);
   flex-direction: column;
