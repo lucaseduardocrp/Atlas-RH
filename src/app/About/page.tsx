@@ -33,7 +33,7 @@ export default function About() {
         </div>
 
         <div className={styles.list}>
-          <h2>Como isso se aplica no dia-a-dia</h2>
+          <h2>Como isso se aplica nos nossos dias</h2>
           <ul>
             {DayList.map((index, id) => <li key={id}>{index.text}</li> )}
           </ul>

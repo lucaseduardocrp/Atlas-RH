@@ -2,6 +2,12 @@
 
 .footerContainer{
   padding: 6rem 25%;
+  text-align: center;
+
+  p{
+    font-size: var(--xsm);
+    margin-top: 4rem;
+  } 
 
   .container{
     @include flexCSS(space-between);
@@ -33,6 +39,8 @@
 
 @media (max-width: 48rem) {
   .footerContainer{
+    padding: 4rem 2%;
+
     .container{
       justify-content: center;
     }

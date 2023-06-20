@@ -21,6 +21,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
+
       <ul className={styles.footerLinks}>
         <li>
           <Link href={'/'}>Home</Link>
@@ -35,6 +36,10 @@ export default function Footer() {
           <Link href={'/Contact'}>Contact</Link>
         </li>
       </ul>
+
+      <p>
+        00.000.000/0001-33 Atlas Consultoria de Recursos Humanos  LTDA Rua Fulano de Tal, 2023 - Centro, Rio de Janeiro - RJ, 00000-000 ©2023 Atlas Consultoria de RH™ . Todos os direitos  reservados. Built with a lot of ❤ by lucascrp
+      </p>
     </footer>
   )
 }
