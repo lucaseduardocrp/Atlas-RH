@@ -2,18 +2,18 @@
 
 .container{
   @include flexCSS();
+  align-items: start;
   gap: 4rem;
 
-  .text{
-    h3{
-      font-size: var(--sm);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+  .text h3{
+    font-size: var(--sm);
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+  }
+}
 
-    p{
-      font-size: var(--xsm);
-      font-weight: 500;
-    }
+@media (max-width: 48rem) {
+  .container{  
+    flex-wrap: wrap;
   }
 }

@@ -16,3 +16,9 @@
   margin-top: 1rem;
   transition: .3s;
 }
+
+@mixin title() {
+  font-size: var(--xl);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,15 @@
+@import '../../sass/mixin.scss';
+
+.container{
+  @include flexCSS();
+  flex-direction: column;
+
+  .title{
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2{
+      @include title();
+    }
+  }
+}

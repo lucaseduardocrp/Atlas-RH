@@ -9,7 +9,7 @@ export default function FirstText(props: {text: string}) {
           <div className={styles.text}>
             <h1>
               Processos organizados para<br />
-              <span>sua empresa crescer</span> <br /> 
+              <strong>sua empresa crescer</strong> <br /> 
               no automático
             </h1>
             <p>{props.text}</p>

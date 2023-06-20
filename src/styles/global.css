@@ -12,11 +12,11 @@
   --dark-200: #0D0D0D;
   --gradient: linear-gradient(to right, var(--red-100), var(--red-400));
   
+  --3xl: 5.6rem;
   --2xl: 4.5rem;
   --xl: 4rem;
   --l: 3rem;
   --m: 2.4rem;
-  --r: 2rem;
   --sm: 1.8rem;
   --xsm: 1.6rem;
 }
@@ -41,12 +41,14 @@ section{
   padding: 12rem 10%;  
 }
 
-span{
+strong{
   color: var(--red-100);
+  font-weight: inherit;
 }
 
 p{
   color: var(--blue-100);
+  font-size: var(--sm);
 }
 
 @media (max-width: 90rem) {
@@ -57,7 +59,7 @@ p{
   }
   
   section{
-    padding: 2rem 2%;
+    padding: 6rem 2% 8rem;
   }
 }
 
