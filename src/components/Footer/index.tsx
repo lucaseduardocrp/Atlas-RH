@@ -10,9 +10,15 @@ export default function Footer() {
         <Image src={'/FooterLogo.png'} width={160} height={52} alt="Colaborators" />
   
         <div className={styles.socialMedia}>
-          <Image src={'/LinkedIn.svg'} width={37} height={37} alt="Colaborators" />
-          <Image src={'/Instagram.svg'} width={37} height={37} alt="Colaborators" />
-          <Image src={'/Whatsapp.svg'} width={37} height={37} alt="Colaborators" />
+          <a href="">
+            <Image src={'/LinkedIn.svg'} width={37} height={37} alt="Colaborators" />
+          </a>
+          <a href="">
+            <Image src={'/Instagram.svg'} width={37} height={37} alt="Colaborators" />
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=5521970263146&text&type=phone_number&app_absent=0" target="_blank">
+            <Image src={'/Whatsapp.svg'} width={37} height={37} alt="Colaborators" />
+          </a>
         </div>
       </div>
       <ul className={styles.footerLinks}>

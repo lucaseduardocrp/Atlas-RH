@@ -9,7 +9,7 @@ export default function FreeAvaliation() {
         <h2>Grandes decisões geram <br /> grandes resultados.</h2>
         <p>Não tenha medo de decidir e ver sua empresa crescer.</p>
       </div>
-      <Button href="">Receber Avaliação Gratuita</Button>
+      <Button href="/Contact">Receber Avaliação Gratuita</Button>
     </section>
   )
 }
