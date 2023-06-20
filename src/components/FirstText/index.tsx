@@ -15,8 +15,8 @@ export default function FirstText(props: {text: string}) {
             <p>{props.text}</p>
           </div>
           <div className={styles.buttonContent}>
-            <Button href='/About'>About Us</Button>
-            <Button href='/Contact'>Contact Me</Button>
+            <Button href='/About'>Sobre nós</Button>
+            <Button href='/Contact'>Contate-me</Button>
           </div>
         </div>
         <div className={styles.atlasImage}>

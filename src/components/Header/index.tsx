@@ -33,16 +33,16 @@ export default function Header() {
         <div className={active ? styles.mobileMenuOpen : styles.mobileMenuClose}>
           <ul className={styles.navlist}>
             <li>
-              <Navlink href={'/'}>Home</Navlink>
+              <Navlink href={'/'}>Início</Navlink>
             </li>
             <li>
-              <Navlink href={'/About'}>About Us</Navlink>
+              <Navlink href={'/About'}>Sobre nós</Navlink>
             </li>
             <li>
-              <Navlink href={'/ServicesPage'}>Services</Navlink>
+              <Navlink href={'/ServicesPage'}>Serviços</Navlink>
             </li>
             <li>
-              <Navlink href={'/Contact'}>Contact</Navlink>
+              <Navlink href={'/Contact'}>Contatos</Navlink>
             </li>
           </ul>
         </div>
