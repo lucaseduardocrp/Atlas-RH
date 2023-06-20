@@ -1,21 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
-import CompanyStatistics from '@/components/CompanyStatistics';
-import styles from './styles.module.scss';
-
-import FirstText from "@/components/FirstText";
 import Link from 'next/link';
-import { Guarantee } from '@/modules/ArrayInfos';
+
+import CompanyStatistics from '@/components/CompanyStatistics';
+import FirstText from "@/components/FirstText";
 import FreeAvaliation from '@/components/FreeAvaliation';
+import Guarantee from '@/components/Guarantee';
+
+import styles from './styles.module.scss';
+import { GuaranteeInfos } from '@/modules/ArrayInfos';
 
 export default function Home() {
   return (
     <>
-      <FirstText text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of "/>
+      <FirstText 
+        text="Nossa equipe de consultores experientes e qualificados está pronta para colaborar com sua organização, trazendo conhecimentos atualizados e as melhores práticas em recursos humanos."
+      />
 
       <section className={styles.productSection}>
         <div className={styles.title}>
           <h2>Produtos que decolam empresas</h2>
-          <p>Para crescer é necessário muita experiência, processo e tecnologia. Adicionamos tudo isso  em produtos focados nas necessidades atuais <br /> e futuras da sua empresa.</p>
+          <p>
+            Para crescer é necessário muita experiência, processo e tecnologia. Adicionamos tudo isso <br />
+            em produtos focados nas necessidades atuais e futuras da sua empresa.
+          </p>
         </div>
         <div className={styles.grid}>
           <img src="/Mackbook.png" alt="Products Statistics" />
@@ -39,6 +46,24 @@ export default function Home() {
       </section>
 
       <CompanyStatistics />
+
+      <section className={styles.guaranteeSection}>
+        <div className={styles.title}>
+          <h2>Garantia total de satisfação</h2>
+          <p>Sem fidelidade, cancele quando quiser e sempre com a melhor equipe</p>
+        </div>
+        <div className={styles.guaranteeGrid}>
+          {GuaranteeInfos.map((index, id) =>
+            <Guarantee
+              src={index.imageUrl}
+              alt={index.title}
+              title={index.title}
+              text={index.text}
+              key={id}
+            />
+          )}
+        </div>
+      </section>
 
       <FreeAvaliation />      
     </>

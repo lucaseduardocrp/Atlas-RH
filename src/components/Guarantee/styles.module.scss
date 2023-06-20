@@ -1,0 +1,14 @@
+@import '../../sass/mixin.scss';
+
+.container{
+  @include flexCSS(start);
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+  width: 28rem;
+  height: 25rem;
+
+  h4{
+   font-size: var(--m); 
+  }
+}

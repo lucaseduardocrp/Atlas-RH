@@ -1,0 +1,43 @@
+@import '../../sass/mixin.scss';
+
+.footerContainer{
+  padding: 6rem 25%;
+
+  .container{
+    @include flexCSS(space-between);
+    flex-wrap: wrap;
+    gap: 3rem;
+    
+    .socialMedia{
+      @include flexCSS();
+      gap: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .footerLinks{
+    @include flexCSS();
+    gap: 4rem;
+    margin-top: 4rem;
+
+    a{
+      font-size: var(--sm);
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .footerContainer{
+    .container{
+      justify-content: center;
+    }
+
+    .footerLinks{
+      flex-direction: column;
+    }
+  }
+}
