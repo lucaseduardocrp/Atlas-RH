@@ -2,9 +2,7 @@
 'use client'
 
 import { useState } from "react";
-
 import Link from "next/link";
-
 import Navlink from "../Navlink";
 
 import styles from './styles.module.scss';
