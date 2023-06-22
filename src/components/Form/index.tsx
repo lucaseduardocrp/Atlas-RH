@@ -1,44 +1,8 @@
 'use client'
 
-import React, { useCallback, useState } from 'react';
 import styles from './styles.module.scss';
 
-type FormTypes = {
-  name: string,
-  email: string,
-  tel: string,
-  text: string,
-  segment: string,
-  emplyees: string,
-  invoicing: string,
-  message: string,
-}
-
 export default function Form() {
-  const [dataForm, setDataFom] = useState<FormTypes>({
-    name: '',
-    email: '',
-    tel: '',
-    text: '',
-    segment: '',
-    emplyees: '',
-    invoicing: '',
-    message: '',
-  });
-
- const handleChangeInput = useCallback((event: React.FormEvent<HTMLInputElement>) => {
-    const targetInput = event?.currentTarget;
-
-    const { value, id } = targetInput;
-    
-    setDataFom({
-      ...dataForm,
-      [id]: value,
-    });
-  }, [dataForm]);
-
-  console.log({ dataForm });
-  
   return(
     <section className={styles.container}>
       <div>
@@ -50,39 +14,10 @@ export default function Form() {
         <h3>Junte-se a +300 clientes satisfeitos</h3>
       
         <form action="" className={styles.form}>
-          <input 
-            type="name" 
-            name="name" 
-            id="name" 
-            placeholder='Qual o seu nome?' 
-            required 
-            onChange={handleChangeInput} 
-          />
-          <input 
-            type="email" 
-            name="email" 
-            id="email" 
-            placeholder='E-mail corporativo' 
-            required 
-            onChange={handleChangeInput}
-          />
-          <input 
-            type="tel" 
-            name="tel" 
-            id="tel" 
-            placeholder='Telefone - (21) 9 7026-3146' 
-            required 
-            maxLength={13} 
-            onChange={handleChangeInput}
-          />
-          <input 
-            type="text" 
-            name="text" 
-            id="text" 
-            placeholder='Nome da sua empresa' 
-            required 
-            onChange={handleChangeInput}
-          />
+          <input type="name" name="name" id="name" placeholder='Qual o seu nome?' required />
+          <input type="email" name="email" id="email" placeholder='E-mail corporativo' required />
+          <input type="tel" name="tel" id="tel" placeholder='Telefone - (21) 9 7026-3146' required maxLength={13}/>
+          <input type="text" name="text" id="text" placeholder='Nome da sua empresa' required />
           <select name="segment" id="segment" required>
             <option value="segmento">Qual o seu segmento</option>
             <option value="service">Serviço</option>
@@ -111,14 +46,7 @@ export default function Form() {
             <option value="extra-large">Mais de 1 milão</option>
           </select>
           
-          <textarea 
-            name="message" 
-            id="message" 
-            cols={30} 
-            rows={10} 
-            placeholder='Qual seu principal desafio?' 
-            required
-          />
+          <textarea name="message" id="message" cols={30} rows={10} placeholder='Qual seu principal desafio?' required />
           
           <input type="submit" value="Receber Avaliação Gratuita" required className={styles.submitBtn} />
         </form>
