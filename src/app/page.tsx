@@ -7,6 +7,7 @@ import FreeAvaliation from '@/components/FreeAvaliation';
 import Guarantee from '@/components/Guarantee';
 
 import styles from './styles.module.scss';
+import { Services } from '@/modules/ArrayInfos';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
 
       <section className={styles.productSection}>
         <div className={styles.title}>
-          <h2>Produtos que decolam empresas</h2>
+          <h2>Serviços que decolam empresas</h2>
           <p>
             Para crescer é necessário muita experiência, processo e tecnologia. Adicionamos tudo isso <br />
             em produtos focados nas necessidades atuais e futuras da sua empresa.
@@ -33,10 +34,9 @@ export default function Home() {
               resultados rápidos e sustentáveis. Veja o que você pode esperar:
             </p>
             <ul className={styles.list}>
-              <li><img src="/CheckIcon.svg" alt="Check Icon" /> Plano de ação prático e customizado</li>
-              <li><img src="/CheckIcon.svg" alt="Check Icon" /> Melhor controle sobre os resultados futuros</li>
-              <li><img src="/CheckIcon.svg" alt="Check Icon" /> Menos estresse e menos dependência da equipe</li>
-              <li><img src="/CheckIcon.svg" alt="Check Icon" /> Mais confiança e clareza sobre o caminho a seguir</li>
+              {Services.map((index, key) => 
+                <li key={key}><img src='/CheckIcon.svg' alt={index.title}/>{index.title}</li> 
+              )}
             </ul>
             <p>Ganhe um parceiro experiente para ajudar no crescimento e estruturação do sucesso da sua empresa.</p>
             <Link href={'/Services'}>Saiba mais</Link>

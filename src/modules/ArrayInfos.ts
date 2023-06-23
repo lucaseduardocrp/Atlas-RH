@@ -33,3 +33,27 @@ export const GuaranteeInfos = [
     imageUrl: 'MoneyIcon.svg'
   }
 ];
+
+export const Services = [
+  {
+    title: 'Recrutamento e Seleção'
+  },
+  {
+    title: 'Cargos e Salários'
+  },
+  {
+    title: 'Treinamentos Corporativos'
+  },
+  {
+    title: 'Gestão de Doméstica'
+  },
+  {
+    title: 'Gestão de Benefícios'
+  },
+  {
+    title: 'Auditoria de Folha de Pagamento, Férias e Rescisões'
+  },
+  {
+    title: 'Coaching'
+  },
+]
