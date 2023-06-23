@@ -21,12 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="Consultoria de RH, Atlas, Consultoria, Coach, Negócios, Empresa" />
-        <meta name="robots" content="index,follow" />
-        <meta name="author" content="Lucas Eduardo Crespo de Carvalho | Atlas Consultoria de RH" />
-      </head>
       <body className={poppins.className}>
         <Header />
         <main>
