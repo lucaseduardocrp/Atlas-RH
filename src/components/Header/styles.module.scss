@@ -3,26 +3,20 @@
 .header{
   width: 100%;
   padding: 1rem 14%;
-  border-bottom: 0.1rem solid var(--red-100);
-  background-color: var(--dark-200);  
+  background-color: var(--white-100);  
   position: relative;
   
   .navbar{
     @include flexCSS(space-between);
 
-    .logo{
-      width: 14rem;
-      object-fit: cover;
-    }
-    
     .navlist{
       @include flexCSS();
       gap: 3rem;
 
       a{
         font-size: var(--sm);
-        font-weight: 400; 
-        color: var(--white-100);
+        font-weight: 500; 
+        color: var(--dark-200);
         position: relative;
   
         &::after{
@@ -31,7 +25,7 @@
           display: block;
           height: 0.1rem;
           width: 0;
-          bottom: 1;
+          bottom: 0;
           left: 0;
           background: linear-gradient(to right, var(--red-100), var(--red-400));
           transition: all .20s ease;
@@ -48,7 +42,7 @@
   display: none;
   
   .mobileMenu{
-    border-top: 0.2rem solid var(--white-100);
+    border-top: 0.2rem solid var(--dark-200);
     width: 3rem;
   
     &::before, &::after{
@@ -95,7 +89,8 @@
     top: 6rem;
     right: 0;
     z-index: 1000;
-    background: var(--dark-200);
+    background: var(--white-100);
+    border-bottom: 0.1rem solid var(--red-100);
   }
   
   .mobileMenuClose{

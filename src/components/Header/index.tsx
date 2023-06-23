@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navlink from "../Navlink";
 
 import styles from './styles.module.scss';
+import Image from "next/image";
 
 export default function Header() {
   const [active, setActive] = useState(false)
@@ -14,11 +14,22 @@ export default function Header() {
     setActive(!active)
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setActive(false);
+    };
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, []);
+
   return(
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <Link href={'/'}>
-          <img className={styles.logo} src='/Logo.png' alt="Logo Atlas Consultoria de RH" />
+          <Image src='/LogoDark.png' alt="Logo Atlas Consultoria de RH"  width={152} height={50}/>
         </Link>
 
         <div className={styles.menu}>

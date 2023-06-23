@@ -20,7 +20,7 @@ export default function FirstText(props: {text: string}) {
         </div>
       </div>
       <div className={styles.atlasImage}>
-        <img src='/Logo.png' alt=''/>
+        <img src='/LogoWhite.png' alt='Atlas Consultoria de RH Logo'/>
       </div>
     </section>
   )
