@@ -1,6 +1,37 @@
+'use client';
+
+import emailjs from '@emailjs/browser';
+
 import styles from './styles.module.scss';
+import { FormEvent, useRef, useState } from 'react';
 
 export default function Form() {
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const [dataForm, setDataForm] = useState({
+    name: '',
+    email: '',
+    tel: '',
+    segment: '',
+    employees: '',
+    invoicing: '',
+    message: '',
+  });
+
+  const handleChangeValue = ({currentTarget}: {currentTarget: HTMLInputElement}) => {
+    setDataForm((dataForm) => ({...dataForm, [currentTarget.name]: currentTarget.value}));
+    console.log(currentTarget.name, currentTarget.value)
+  };
+
+  function sendEmail(event: FormEvent){
+    event.preventDefault();
+
+    emailjs.send('service_rusb2z2', 'template_vu1sz78', dataForm, '7k766DxYE0oyFA7MS')
+    if(formRef.current) {
+      formRef.current.reset();
+    }
+  }
+
   return(
     <section className={styles.container}>
       <div>
@@ -11,38 +42,64 @@ export default function Form() {
       <div className={styles.formContainer}>
         <h3>Junte-se a +300 clientes satisfeitos</h3>
       
-        <form action="" className={styles.form}>
-          <input type="name" name="name" id="name" placeholder='Qual o seu nome?' required />
-          <input type="email" name="email" id="email" placeholder='E-mail corporativo' required />
-          <input type="tel" name="tel" id="tel" placeholder='Telefone - (21) 9 7026-3146' required maxLength={13}/>
-          <input type="text" name="text" id="text" placeholder='Nome da sua empresa' required />
-          <select name="segment" id="segment" required>
-            <option value="segmento">Qual o seu segmento</option>
-            <option value="service">Serviço</option>
-            <option value="retail">Varejo</option>
-            <option value="factory">Indústria</option>
-            <option value="ecommerce">E-commerce</option>
-            <option value="sass">Sass</option>
-            <option value="education">Educação</option>
-            <option value="others">Outros</option>
-          </select>
-          <select name="employees" id="employees" required>
-            <option value="employees">Quantos funcionários tem sua empresa?</option>
-            <option value="0-1">0 a 1</option>
-            <option value="2-10">2 a 10</option>
-            <option value="11-20">11 a 20</option>
-            <option value="21-50">21 a 50</option>
-            <option value="51-100">51 a 100</option>
-            <option value="100">+100</option>
-          </select>
-          <select name="invoicing" id="invoicing" required>
-            <option value="invoicing">Qual o faturamento mensal da sua empresa?</option>
-            <option value="low">Até 15 mil</option>
-            <option value="medium">16 mil a 50 mil</option>
-            <option value="regular">51 mil a 300 mil</option>
-            <option value="large">301 mil a 1 milhão</option>
-            <option value="extra-large">Mais de 1 milão</option>
-          </select>
+        <form action="" className={styles.form} onSubmit={sendEmail} ref={formRef}>
+          <input 
+            type="name" 
+            name="name" 
+            id="name" 
+            placeholder='Qual o seu nome?' 
+            required 
+            onChange={handleChangeValue}
+          />
+          <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            placeholder='E-mail corporativo' 
+            required 
+            onChange={handleChangeValue}
+          />
+          <input 
+            type="tel" 
+            name="tel" 
+            id="tel" 
+            placeholder='Telefone - (21) 9 7026-3146' 
+            required 
+            maxLength={13}
+            onChange={handleChangeValue}
+          />
+          <input 
+            type="company" 
+            name="company" 
+            id="company" 
+            placeholder='Nome da sua empresa' 
+            required
+            onChange={handleChangeValue} 
+          />
+          <input 
+            type="segment" 
+            name="segment" 
+            id="segment" 
+            placeholder='Qual o seu segmento?' 
+            required
+            onChange={handleChangeValue} 
+          />
+          <input 
+            type="employees" 
+            name="employees" 
+            id="employees" 
+            placeholder='Quantos funcionários tem sua empresa?' 
+            required
+            onChange={handleChangeValue} 
+          />
+          <input 
+            type="invoicing" 
+            name="invoicing" 
+            id="invoicing" 
+            placeholder='Qual o faturamento mensal da sua empresa?' 
+            required
+            onChange={handleChangeValue} 
+          />
           
           <textarea name="message" id="message" cols={30} rows={10} placeholder='Qual seu principal desafio?' required />
           
