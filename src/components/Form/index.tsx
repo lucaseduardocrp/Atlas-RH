@@ -23,10 +23,10 @@ export default function Form() {
     console.log(currentTarget.name, currentTarget.value)
   };
 
-  function sendEmail(event: FormEvent){
+  async function sendEmail(event: FormEvent){
     event.preventDefault();
 
-    emailjs.send('service_rusb2z2', 'template_vu1sz78', dataForm, '7k766DxYE0oyFA7MS')
+    await emailjs.send('service_rusb2z2', 'template_vu1sz78', dataForm, '7k766DxYE0oyFA7MS')
     if(formRef.current) {
       formRef.current.reset();
     }
