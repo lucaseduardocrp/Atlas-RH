@@ -6,10 +6,15 @@ import Link from "next/link";
 export default function Footer() {
   return(
     <footer className={styles.footerContainer}>
+      <div className={styles.contibutionCompany}>
+        <Image src="/Fratelo.jpeg" alt="Colaborators" width={80} height={70} />
+      </div>
+      
       <div className={styles.container}>
         <Link href="/">
           <Image src={'/FooterLogo.png'} width={160} height={52} alt="Colaborators" />
         </Link>
+
   
         <div className={styles.socialMedia}>
           {/* <a href="">

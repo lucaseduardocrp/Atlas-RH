@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from './styles.module.scss';
 
 export default function CompanyStatistics() {
@@ -14,11 +13,11 @@ export default function CompanyStatistics() {
 
       <div className={styles.statistics}>
         <div className={styles.box}>
-          <h4>+300</h4>
+          <h4>+100</h4>
           <p>empresas atendidas</p>
         </div>
         <div className={styles.box}>
-          <h4>23</h4>
+          <h4>13</h4>
           <p>estados brasileiros</p>
         </div>
         <div className={styles.box}>
@@ -26,8 +25,6 @@ export default function CompanyStatistics() {
           <p>segmentos atendidos</p>
         </div>
       </div>
-
-      <img src="/Colaborators.png" alt="Colaborators" />
     </section>
   )
 }
