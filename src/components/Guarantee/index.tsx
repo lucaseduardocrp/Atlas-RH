@@ -14,7 +14,7 @@ export default function Guarantee() {
           {GuaranteeInfos.map((index, id) =>
             <div className={styles.container} key={id}>
               <Image src={index.imageUrl} width={50} height={50} alt={index.title} />
-              <h4>{index.title}</h4>
+              <h3>{index.title}</h3>
               <p>{index.text}</p>
             </div>
           )}
