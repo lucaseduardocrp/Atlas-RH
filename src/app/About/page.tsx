@@ -1,7 +1,9 @@
-import { DayList, TopicsText, ValuesText } from '@/modules/TextInformations';
 import styles from './style.module.scss';
 import CompanyStatistics from '@/components/CompanyStatistics';
 import FreeAvaliation from '@/components/FreeAvaliation';
+import { ValuesText } from '@/modules/CompanyValues';
+import { DayList } from '@/modules/DayList';
+import { TopicsText } from '@/modules/TopicsText';
 
 export default function About() {
   return(

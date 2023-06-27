@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Navlink from "../Navlink";
 
 import styles from './styles.module.scss';
 import Image from "next/image";
+import Navlink from "./Navlink";
 
 export default function Header() {
   const [active, setActive] = useState(false)

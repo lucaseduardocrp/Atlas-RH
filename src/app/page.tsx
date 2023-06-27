@@ -7,7 +7,7 @@ import FreeAvaliation from '@/components/FreeAvaliation';
 import Guarantee from '@/components/Guarantee';
 
 import styles from './styles.module.scss';
-import { Services } from '@/modules/ArrayInfos';
+import { Services } from '@/modules/Services';
 
 export default function Home() {
   return (
@@ -39,7 +39,7 @@ export default function Home() {
               )}
             </ul>
             <p>Ganhe um parceiro experiente para ajudar no crescimento e estruturação do sucesso da sua empresa.</p>
-            <Link href={'/Services'}>Saiba mais</Link>
+            <Link href={'/ServicesPage'}>Saiba mais</Link>
           </div>
         </div>
       </section>

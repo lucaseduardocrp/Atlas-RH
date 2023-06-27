@@ -1,0 +1,35 @@
+@import '../../sass/mixin.scss';
+
+.planSection .container{  
+  @include flexCSS();
+  flex-direction: column;
+  margin: 0 11rem;
+  gap: 6rem; 
+  
+    
+  >h2{
+    @include title();
+    margin-bottom: -4rem;
+  }
+}
+
+.serviceSection{
+  text-align: center;
+
+  h2{
+    @include title();
+    margin-bottom: 8rem;
+  }
+
+  .cardsContainer{
+    @include flexCSS();
+    flex-wrap: wrap;
+   }
+}
+
+@media (max-width: 64rem) {
+  .planSection .container{  
+    margin: 0;
+    gap: 6rem; 
+  }
+}

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './styles.module.scss';
-import { GuaranteeInfos } from '@/modules/ArrayInfos';
+import { GuaranteeInfos } from '@/modules/GuaranteeInfos';
 
 export default function Guarantee() {
   return (
