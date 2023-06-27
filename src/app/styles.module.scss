@@ -63,5 +63,13 @@
     img{
       width: 30rem;
     }
+
+    .rigthContent .list li{
+      align-items: start;
+      
+      img{
+        margin-top: 0.4rem;
+      }
+    }
   }
 }

@@ -1,4 +1,3 @@
-
 import FirstText from '@/components/FirstText';
 import PlanBox from '@/components/PlanBox';
 
@@ -10,6 +9,7 @@ import styles from './style.module.scss';
 import { PlanInfos } from '@/modules/PlanInfos';
 import ServiceCards from '@/components/ServiceCards';
 import { Services } from '@/modules/Services';
+
 
 export default function ServicesPage() {
   return(
@@ -33,7 +33,7 @@ export default function ServicesPage() {
                 src={index.imageUrl} 
                 alt={index.title} 
                 key={id} 
-              />)};
+              />)}
           </div>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function ServicesPage() {
                 title={index.title}
                 description={index.description}
               />
-            )};
+            )}
           </div>
       </section>
 
