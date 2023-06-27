@@ -13,15 +13,15 @@ export default function CompanyStatistics() {
 
       <div className={styles.statistics}>
         <div className={styles.box}>
-          <h4>+100</h4>
+          <span>+100</span>
           <p>empresas atendidas</p>
         </div>
         <div className={styles.box}>
-          <h4>13</h4>
+          <span>13</span>
           <p>estados brasileiros</p>
         </div>
         <div className={styles.box}>
-          <h4>+20</h4>
+          <span>+20</span>
           <p>segmentos atendidos</p>
         </div>
       </div>

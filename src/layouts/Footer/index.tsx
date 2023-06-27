@@ -7,7 +7,7 @@ export default function Footer() {
   return(
     <footer className={styles.footerContainer}>
       <div className={styles.contibutionCompany}>
-        <Image src="/Fratelo.jpeg" alt="Colaborators" width={80} height={70} />
+        <Image src="/Fratelo.jpeg" alt="Colaborators" width={80} height={80} />
       </div>
       
       <div className={styles.container}>

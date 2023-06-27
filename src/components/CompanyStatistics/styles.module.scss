@@ -23,8 +23,9 @@
     @include flexCSS();
     flex-direction: column;
 
-    h4{
+    span{
       font-size: var(--3xl);
+      font-weight: 700;
       color: var(--red-100);
     }
   }
