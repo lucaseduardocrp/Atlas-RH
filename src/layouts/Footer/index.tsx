@@ -12,10 +12,10 @@ export default function Footer() {
         </Link>
   
         <div className={styles.socialMedia}>
-          <a href="">
+          {/* <a href="">
             <Image src={'/LinkedIn.svg'} width={37} height={37} alt="Colaborators" />
-          </a>
-          <a href="">
+          </a> */}
+          <a href="https://www.instagram.com/_atlasconsultoria/?igshid=NTc4MTIwNjQ2YQ%3D%3D">
             <Image src={'/Instagram.svg'} width={37} height={37} alt="Colaborators" />
           </a>
           <a href="https://api.whatsapp.com/send/?phone=5521970263146&text&type=phone_number&app_absent=0" target="_blank">
