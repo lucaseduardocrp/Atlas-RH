@@ -60,8 +60,6 @@ p{
 @media (max-width: 90rem) {
   :root{
     --2xl: 3rem;
-    --xl: 2.8rem;
-    --l: 2.8rem;
   }
   
   section{
