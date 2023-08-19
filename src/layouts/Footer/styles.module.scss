@@ -1,37 +1,41 @@
-@import '../../sass/mixin.scss';
+@import "../../sass/mixin.scss";
 
-.footerContainer{
+.footerContainer {
   padding: 6rem 25%;
   text-align: center;
 
-  p{
+  p {
     font-size: var(--xsm);
     margin-top: 4rem;
-  } 
-  
-  .container{
+  }
+
+  .contibutionCompany {
+    @include flexCSS();
+    gap: 4rem;
+  }
+
+  .container {
     @include flexCSS(space-between);
     flex-wrap: wrap;
     gap: 3rem;
-    
-    .socialMedia{
+
+    .socialMedia {
       @include flexCSS();
       gap: 1rem;
       cursor: pointer;
     }
   }
 
-
-  .footerLinks{
+  .footerLinks {
     @include flexCSS();
     gap: 4rem;
     margin-top: 4rem;
 
-    a{
+    a {
       font-size: var(--sm);
       color: var(--dark-200);
 
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
@@ -39,14 +43,14 @@
 }
 
 @media (max-width: 48rem) {
-  .footerContainer{
+  .footerContainer {
     padding: 4rem 2%;
 
-    .container{
+    .container {
       justify-content: center;
     }
 
-    .footerLinks{
+    .footerLinks {
       flex-direction: column;
     }
   }
