@@ -9,9 +9,19 @@
     margin-top: 4rem;
   }
 
-  .contibutionCompany {
-    @include flexCSS();
-    gap: 4rem;
+  .contributionsContainer {
+    h2 {
+      font-size: var(--m);
+      font-weight: 500;
+      color: var(--gray-200);
+      margin-bottom: 4rem;
+    }
+
+    .contributionCompany {
+      @include flexCSS();
+      gap: 4rem;
+      margin-bottom: 6rem;
+    }
   }
 
   .container {
